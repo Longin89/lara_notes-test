@@ -27,7 +27,7 @@ use App\Http\Controllers\Controller;
  *          allOf={
  *              @OA\Schema(
  *                  @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *                  @OA\Property(property="phone", type="string", example="03"),
+ *                  @OA\Property(property="phone", type="integer", example="89998887766"),
  *                  @OA\Property(property="company", type="string", example="Google"),
  *                  @OA\Property(property="email", type="email", example="test@mail.ru"),
  *                  @OA\Property(property="birthday", type="date", example="1990-01-01"),
@@ -43,7 +43,7 @@ use App\Http\Controllers\Controller;
  *      @OA\JsonContent(
  *      @OA\Property(property="data", type="object",
  *          @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *          @OA\Property(property="phone", type="string", example="03"),
+ *          @OA\Property(property="phone", type="integer", example="89998887766"),
  *          @OA\Property(property="company", type="string", example="Google"),
  *          @OA\Property(property="email", type="string", example="test@mail.ru"),
  *          @OA\Property(property="birthday", type="string", format="date", example="1990-01-01"),
@@ -69,7 +69,7 @@ use App\Http\Controllers\Controller;
  *       @OA\Property(property="data", type="array", @OA\Items(
  *          @OA\Property(property="id", type="integer", example=5),
  *          @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *          @OA\Property(property="phone", type="string", example="03"),
+ *          @OA\Property(property="phone", type="integer", example="89998887766"),
  *          @OA\Property(property="company", type="string", example="Google"),
  *          @OA\Property(property="email", type="string", example="test@mail.ru"),
  *          @OA\Property(property="birthday", type="string", format="date", example="1990-01-01"),
@@ -109,7 +109,7 @@ use App\Http\Controllers\Controller;
  *          @OA\Property(property="content", type="object",
  *              @OA\Property(property="id", type="integer", example=5),
  *              @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *              @OA\Property(property="phone", type="string", example="03"),
+ *              @OA\Property(property="phone", type="integer", example="89998887766"),
  *              @OA\Property(property="company", type="string", example="Google"),
  *              @OA\Property(property="email", type="string", example="test@mail.ru"),
  *              @OA\Property(property="birthday", type="string", format="date", example="1990-01-01"),
@@ -140,7 +140,7 @@ use App\Http\Controllers\Controller;
  *      allOf={
  *          @OA\Schema(
  *          @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *          @OA\Property(property="phone", type="string", example="03"),
+ *          @OA\Property(property="phone", type="integer", example="89998887766"),
  *          @OA\Property(property="company", type="string", example="Google"),
  *          @OA\Property(property="email", type="email", example="test@mail.ru"),
  *          @OA\Property(property="birthday", type="date", example="1990-01-01"),
@@ -156,7 +156,7 @@ use App\Http\Controllers\Controller;
  *      @OA\JsonContent(
  *          @OA\Property(property="data", type="object",
  *          @OA\Property(property="fio", type="string", example="Ivanov Ivan Ivanovich"),
- *          @OA\Property(property="phone", type="string", example="03"),
+ *          @OA\Property(property="phone", type="integer", example="89998887766"),
  *          @OA\Property(property="company", type="string", example="Google"),
  *          @OA\Property(property="email", type="string", example="test@mail.ru"),
  *          @OA\Property(property="birthday", type="string", format="date", example="1990-01-01"),
@@ -186,9 +186,6 @@ use App\Http\Controllers\Controller;
  * @OA\Response(
  *      response=204,
  *      description="Done",
- *      @OA\JsonContent(
- *              @OA\Property(property="message", type="string", example="Запись успешно удалена"),
- *              ),
  *            ),
  *          ),
  */

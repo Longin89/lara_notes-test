@@ -74,8 +74,8 @@ class NoteController extends Controller
 
         try {
             $validatedData = $request->validate([
-                'fio' => 'required',
-                'phone' => 'required|string:max:20',
+                'fio' => 'required|string:max:255',
+                'phone' => 'required|integer:max:20',
                 'email' => 'required|email',
                 'company' => 'nullable|string|max:255',
                 'birthday' => 'nullable|date',
@@ -196,8 +196,8 @@ class NoteController extends Controller
 // Валидируем входные данные
 
             $validatedData = $request->validate([
-                'fio' => 'required',
-                'phone' => 'required|string|max:55',
+                'fio' => 'required|string:max:255',
+                'phone' => 'required|integer:max:20',
                 'email' => 'required|email',
                 'company' => 'nullable|string|max:255',
                 'birthday' => 'nullable|date',
