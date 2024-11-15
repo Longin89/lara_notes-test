@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 // Контроллер используется для вынесения в отдельный файл документации для Swagger
-
+// TODO - добавить multiplart/form-data для корректной загрузки файлов в Swagger
 /**
  *
  * @OA\Info(
